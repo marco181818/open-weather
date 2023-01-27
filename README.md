@@ -1,4 +1,4 @@
-# Open-Weather
+# Open Weather
 ## Prueba Técnica Finvivir
 Api para consultar información del clima, mediante el Api de OpenWeather
 
