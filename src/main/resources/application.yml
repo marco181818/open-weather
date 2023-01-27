@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url:  jdbc:h2:mem:testdb;DB_CLOSE_ON_EXIT=FALSE
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: finvivir2023
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  h2:
+    console:
+      enabled: true
+
+api:
+  weather:
+    key:  74656d3cdea42cf62a4390e657a0394d
+    paths:
+      getGeoPosition: http://api.openweathermap.org/geo/1.0/direct?q={city name}&limit=1&appid=${api.weather.key}
+      getWeather: https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid=${api.weather.key}
